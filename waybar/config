@@ -1,0 +1,119 @@
+// -*- mode: json -*-
+
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": "30",
+    "output": "DP-3",
+
+    "modules-left": [
+        "custom/heart",
+        "custom/right-arrow-dark",
+        "custom/right-arrow-light",
+        "hyprland/window",
+        "custom/right-arrow-dark"
+    ],
+    "modules-center": [
+        "custom/left-arrow-dark",
+        "clock",
+        "custom/right-arrow-dark"
+    ],
+    "modules-right": [
+        "custom/left-arrow-dark",
+        "pulseaudio",
+        "custom/left-arrow-light",
+        "custom/left-arrow-dark",
+        "memory",
+        "custom/left-arrow-light",
+        "custom/left-arrow-dark",
+        "cpu",
+        "custom/left-arrow-light",
+        "custom/left-arrow-dark",
+        "disk",
+    ],
+
+   	"custom/left-arrow-dark": {
+  		"format": "",
+  		"tooltip": false
+   	},
+   	"custom/left-arrow-light": {
+  		"format": "",
+  		"tooltip": false
+   	},
+   	"custom/right-arrow-dark": {
+  		"format": "",
+  		"tooltip": false
+   	},
+   	"custom/right-arrow-light": {
+  		"format": "",
+  		"tooltip": false
+   	},
+   	"custom/divider": {
+        "format": "❘",
+        "tooltip": false
+    },
+    "custom/heart": {
+        "format": "❤",
+        "menu": "on-click",
+		"menu-file": "~/.config/waybar/power_menu.xml",
+		"menu-top": 0,
+		"menu-left": 0,
+		"menu-actions": {
+			"shutdown": "shutdown now",
+			"reboot": "reboot",
+		},
+    },
+
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	},
+
+	"clock": {
+		"format": "{:%H:%M}",
+		"format-alt": "{:%a / %m-%d}",
+		"tooltip": false,
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": " 0%",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pamixer -t",
+		"on-click-right": "playerctl play-pause",
+		"tooltip": false
+	},
+	"memory": {
+		"interval": 1,
+		"format": " {}%",
+		"tooltip": false,
+		"format-alt": "MEM {used}/{total}"
+	},
+	"cpu": {
+		"interval": 1,
+		"format": "{usage:2}%",
+		"tooltip": false,
+		"format-alt": "CPU {icon0}{icon1}{icon2}{icon3}",
+	    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+	},
+	"disk": {
+        "interval": 5,
+        "format": " {percentage_used:2}%",
+        "format-alt": "DISK {used}/{total}",
+        "tooltip": false
+	},
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 40,
+        "tooltip": true
+    }
+}
