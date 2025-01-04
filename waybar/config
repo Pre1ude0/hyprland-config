@@ -1,79 +1,49 @@
-// -*- mode: json -*-
-
 {
     "layer": "bottom",
     "position": "top",
-    "height": "30",
-    "output": "DP-3",
+    "height": 21,
+    "spacing": 10,
+		"output": "DP-3",
 
-    "modules-left": [
-        "custom/heart",
-        "custom/right-arrow-dark",
-        "custom/right-arrow-light",
-        "hyprland/window",
-        "custom/right-arrow-dark"
-    ],
-    "modules-center": [
-        "custom/left-arrow-dark",
-        "clock",
-        "custom/right-arrow-dark"
-    ],
-    "modules-right": [
-        "custom/left-arrow-dark",
-        "pulseaudio",
-        "custom/left-arrow-light",
-        "custom/left-arrow-dark",
-        "memory",
-        "custom/left-arrow-light",
-        "custom/left-arrow-dark",
-        "cpu",
-        "custom/left-arrow-light",
-        "custom/left-arrow-dark",
-        "disk",
-    ],
+    "modules-left": ["custom/power","hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["mpris", "pulseaudio"],
 
-   	"custom/left-arrow-dark": {
-  		"format": "",
-  		"tooltip": false
-   	},
-   	"custom/left-arrow-light": {
-  		"format": "",
-  		"tooltip": false
-   	},
-   	"custom/right-arrow-dark": {
-  		"format": "",
-  		"tooltip": false
-   	},
-   	"custom/right-arrow-light": {
-  		"format": "",
-  		"tooltip": false
-   	},
-   	"custom/divider": {
-        "format": "❘",
-        "tooltip": false
-    },
-    "custom/heart": {
-        "format": "❤",
+		"mpris": {
+			"format": "{status_icon} {artist} - {title} ~ {player_icon}",
+			// "format-paused": "{player_icon} {artist} - {title}",
+			"format-paused": "{status_icon} {artist} - {title} ~ {player_icon}",
+			"player-icons": {
+				"default":"🎵",
+				"spotify": "",
+				"firefox": ""
+			},
+			"status-icons": {
+				"paused": "",
+				"playing":""
+			},
+			"tooltip": false,
+			"max-lenght": 50
+			// "ignored-players": ["firefox"]
+		},
+
+    "custom/power": {
+        "format": "",
         "menu": "on-click",
 		"menu-file": "~/.config/waybar/power_menu.xml",
 		"menu-top": 0,
 		"menu-left": 0,
-		"menu-actions": {
-			"shutdown": "shutdown now",
-			"reboot": "reboot",
-		},
+				"menu-actions": {
+					"shutdown": "shutdown now",
+					"reboot": "reboot",
+				},
     },
 
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
-
-	"clock": {
-		"format": "{:%H:%M}",
-		"format-alt": "{:%a / %m-%d}",
-		"tooltip": false,
-	},
+    "clock": {
+        "format": "{:%H:%M}",
+				"format-alt": "{:%d.%m.%Y}",
+				"tooltip": false
+    },
 
 	"pulseaudio": {
 		"format": "{icon} {volume:2}%",
@@ -91,29 +61,59 @@
 		"on-click-right": "playerctl play-pause",
 		"tooltip": false
 	},
-	"memory": {
-		"interval": 1,
-		"format": " {}%",
-		"tooltip": false,
-		"format-alt": "MEM {used}/{total}"
-	},
-	"cpu": {
-		"interval": 1,
-		"format": "{usage:2}%",
-		"tooltip": false,
-		"format-alt": "CPU {icon0}{icon1}{icon2}{icon3}",
-	    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-	},
-	"disk": {
-        "interval": 5,
-        "format": " {percentage_used:2}%",
-        "format-alt": "DISK {used}/{total}",
-        "tooltip": false
-	},
 
-    "hyprland/window": {
+    "battery": {
+        "bat": "BAT1",
+        "interval": 60,
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
+    },
+
+    "backlight": {
+        "format": "\udb80\udcdf  {percent}%"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "\uf4bc  {used:0.1f}G"
+    },
+
+    "temperature": {
+        "format": " {temperatureC}°C"
+    },
+
+    "network": {
+        "format": "",
+        "format-ethernet": "\udb83\udc9d ",
+        "format-wifi": "{icon} ",
+        "format-disconnected": "\udb83\udc9c ",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+    },
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+    },
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16
+    },
+
+		"hyprland/window": {
         "format": "{title}",
-        "max-length": 40,
-        "tooltip": true
+        "max-length": 50,
+        "tooltip": false
     }
 }

@@ -13,7 +13,7 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +67 .config/hypr/hyprland.conf
+badd +62 .config/hypr/hyprland.conf
 badd +1 =\ \{
 badd +1 \[Plugins]\ (5)
 badd +1 \[Plugins]\ (4)
@@ -36,12 +36,10 @@ badd +63 Desktop/Dev/biennalelatvia/concept3/index.html
 badd +1 Desktop/Dev/pre1udedev/public/js/main.js
 badd +33 .config/waybar/config
 badd +39 .config/waybar/config1
-badd +55 .config/waybar/style.css
+badd +1 .config/waybar/style.css
 badd +11 Desktop/Dev/livewaybar.sh
-badd +32 .config/rofi/config.rasi
-badd +15 .config/waybar/power_menu.xml
-badd +207 .conf/neofetch
-badd +0 .config/neofetch/config.conf
+badd +1 .config/rofi/config.rasi
+badd +0 NvimTree_3
 argglobal
 %argdel
 set stal=2
@@ -72,9 +70,9 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 24 + 25) / 51)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
 exe 'vert 1resize ' . ((&columns * 70 + 105) / 211)
-exe '2resize ' . ((&lines * 23 + 25) / 51)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
 exe 'vert 2resize ' . ((&columns * 70 + 105) / 211)
 exe 'vert 3resize ' . ((&columns * 69 + 105) / 211)
 exe 'vert 4resize ' . ((&columns * 70 + 105) / 211)
@@ -90,7 +88,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 44 - ((0 * winheight(0) + 12) / 24)
+let s:l = 44 - ((0 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -113,7 +111,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 32 - ((0 * winheight(0) + 11) / 23)
+let s:l = 32 - ((0 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -136,7 +134,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 33 - ((0 * winheight(0) + 24) / 48)
+let s:l = 33 - ((0 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -159,16 +157,16 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 28 - ((23 * winheight(0) + 24) / 48)
+let s:l = 28 - ((24 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 28
 normal! 05|
 wincmd w
-exe '1resize ' . ((&lines * 24 + 25) / 51)
+exe '1resize ' . ((&lines * 25 + 26) / 53)
 exe 'vert 1resize ' . ((&columns * 70 + 105) / 211)
-exe '2resize ' . ((&lines * 23 + 25) / 51)
+exe '2resize ' . ((&lines * 24 + 26) / 53)
 exe 'vert 2resize ' . ((&columns * 70 + 105) / 211)
 exe 'vert 3resize ' . ((&columns * 69 + 105) / 211)
 exe 'vert 4resize ' . ((&columns * 70 + 105) / 211)
@@ -204,7 +202,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 133 - ((47 * winheight(0) + 24) / 48)
+let s:l = 133 - ((49 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -227,7 +225,7 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 35 - ((13 * winheight(0) + 24) / 48)
+let s:l = 35 - ((14 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
@@ -237,7 +235,7 @@ wincmd w
 exe 'vert 1resize ' . ((&columns * 105 + 105) / 211)
 exe 'vert 2resize ' . ((&columns * 105 + 105) / 211)
 tabnext
-edit .config/neofetch/config.conf
+edit NvimTree_3
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -262,14 +260,13 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe 'vert 1resize ' . ((&columns * 30 + 105) / 211)
-exe '2resize ' . ((&lines * 40 + 25) / 51)
-exe 'vert 2resize ' . ((&columns * 116 + 105) / 211)
-exe '3resize ' . ((&lines * 7 + 25) / 51)
-exe 'vert 3resize ' . ((&columns * 116 + 105) / 211)
-exe 'vert 4resize ' . ((&columns * 63 + 105) / 211)
+exe '2resize ' . ((&lines * 25 + 26) / 53)
+exe 'vert 2resize ' . ((&columns * 89 + 105) / 211)
+exe '3resize ' . ((&lines * 24 + 26) / 53)
+exe 'vert 3resize ' . ((&columns * 89 + 105) / 211)
+exe 'vert 4resize ' . ((&columns * 90 + 105) / 211)
 argglobal
-enew
-file NvimTree_3
+balt .config/waybar/style.css
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -278,10 +275,22 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal nofen
-lcd ~/.config/neofetch
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 1 - ((0 * winheight(0) + 25) / 50)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+lcd ~/.config/rofi
 wincmd w
 argglobal
-balt ~/.config/hypr/hyprland.conf
+if bufexists(fnamemodify("~/.config/waybar/style.css", ":p")) | buffer ~/.config/waybar/style.css | else | edit ~/.config/waybar/style.css | endif
+if &buftype ==# 'terminal'
+  silent file ~/.config/waybar/style.css
+endif
+balt ~/.config/waybar/config1
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -292,12 +301,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 529 - ((15 * winheight(0) + 20) / 40)
+let s:l = 8 - ((7 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 529
-normal! 020|
+keepjumps 8
+normal! 018|
 wincmd w
 argglobal
 if bufexists(fnamemodify("~/.config/hypr/hyprland.conf", ":p")) | buffer ~/.config/hypr/hyprland.conf | else | edit ~/.config/hypr/hyprland.conf | endif
@@ -315,19 +324,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 55 - ((1 * winheight(0) + 3) / 7)
+let s:l = 66 - ((19 * winheight(0) + 12) / 24)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 55
-normal! 033|
+keepjumps 66
+normal! 0
 wincmd w
 argglobal
-if bufexists(fnamemodify("~/.config/waybar/style.css", ":p")) | buffer ~/.config/waybar/style.css | else | edit ~/.config/waybar/style.css | endif
+if bufexists(fnamemodify("~/.config/rofi/config.rasi", ":p")) | buffer ~/.config/rofi/config.rasi | else | edit ~/.config/rofi/config.rasi | endif
 if &buftype ==# 'terminal'
-  silent file ~/.config/waybar/style.css
+  silent file ~/.config/rofi/config.rasi
 endif
-balt ~/.config/hypr/hyprland.conf
+balt ~/.config/waybar/style.css
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -338,19 +347,19 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 42 - ((17 * winheight(0) + 24) / 48)
+let s:l = 52 - ((38 * winheight(0) + 25) / 50)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 42
-normal! 0
+keepjumps 52
+normal! 020|
 wincmd w
 exe 'vert 1resize ' . ((&columns * 30 + 105) / 211)
-exe '2resize ' . ((&lines * 40 + 25) / 51)
-exe 'vert 2resize ' . ((&columns * 116 + 105) / 211)
-exe '3resize ' . ((&lines * 7 + 25) / 51)
-exe 'vert 3resize ' . ((&columns * 116 + 105) / 211)
-exe 'vert 4resize ' . ((&columns * 63 + 105) / 211)
+exe '2resize ' . ((&lines * 25 + 26) / 53)
+exe 'vert 2resize ' . ((&columns * 89 + 105) / 211)
+exe '3resize ' . ((&lines * 24 + 26) / 53)
+exe 'vert 3resize ' . ((&columns * 89 + 105) / 211)
+exe 'vert 4resize ' . ((&columns * 90 + 105) / 211)
 tabnext 3
 set stal=1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
@@ -367,6 +376,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

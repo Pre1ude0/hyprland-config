@@ -1,149 +1,71 @@
-@define-color bg_color #430019;
-@define-color bg_color_alt #000000;
-@define-color fg_color #bf023f;
-@define-color active_fg_color #00cca0;
-@define-color inactive_bg_color #bf023f;
-@define-color active_border_color #00cca0;
-
-@keyframes pulse {
-    0% {
-        color: @fg_color;
-        font-size: 16px;
-    }
-    25% {
-        color: @active_fg_color;
-        font-size: 20px;
-    }
-    50% {
-        font-size: 18px;
-    }
-    75% {
-        color: @active_fg_color;
-        font-size: 20px;
-    }
-    100% {
-        color: @fg_color;
-        font-size: 16px;
-    }
-}
+@define-color foreground #eff0f1;
+@define-color foreground-inactive #7f8c8d;
+@define-color background transparent;
+@define-color background-prim #232629;
+@define-color background-alt #31363b;
 
 * {
-    font-size: 18px;
-    font-family: monospace;
+  font-family: "CodeNewRoman Nerd Font Propo";
+  font-size: 17px;
+  padding: 0;
+  margin: 0;
+
+  color: @foreground;
 }
 
 window#waybar {
-    background: transparent;
-    color: #fdf6e3;
+  padding-top: 5px;
+  color: @foreground;
+  background-color: @background;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-    color: @bg_color;
-    font-size: 22px;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-    color: @bg_color_alt;
-    background: @bg_color;
-    font-size: 22px;
-}
-#custom-divider {
-    color: @fg_color;
-    background: @bg_color;
-    font-size: 22px;
-}
-#custom-heart {
-    color: @fg_color;
-    background: @bg_color;
-    animation: pulse 1s infinite;
-    min-width: 40px;
-    transition: color 200ms;
-    animation-fill-mode: none;
+.empty #window {
+  background-color: transparent;
 }
 
-#workspaces,
-#clock,
-#pulseaudio,
-#memory,
-#cpu,
-#temperature,
-#disk {
-    background: @bg_color;
-    color: @fg_color;
-    transition:
-        color 150ms,
-        font-weight 0.1s;
+.empty #mpris {
+  /* background-color: transparent; */
 }
 
-#temperature {
-    padding: 0 5px;
+.modules-right {
+  padding-right: 5px;
 }
 
-#window {
-    padding: 0 5px;
-    color: @fg_color;
-    background: @bg_color;
-    transition:
-        color 150ms,
-        font-weight 0.1s;
-}
-
-#pulseaudio:hover {
-    color: #268bd2;
-    font-weight: bold;
-}
-#memory:hover {
-    color: #2aa198;
-    font-weight: bold;
-}
-#cpu:hover {
-    color: #6c71c4;
-    font-weight: bold;
-}
-#battery:hover {
-    color: #859900;
-    font-weight: bold;
-}
-#disk:hover {
-    color: #b58900;
-    font-weight: bold;
-}
-#temperature:hover {
-    color: #dc322f;
-    font-weight: bold;
-}
-#clock:hover {
-    color: @active_fg_color;
-    font-weight: bold;
-}
-#window:hover {
-    color: @active_fg_color;
-    font-weight: bold;
+.modules-left {
+  padding-left: 5px;
 }
 
 #clock,
 #pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk {
-    padding: 0 10px;
+#custom-power,
+#window,
+#network,
+#mpris {
+  background-color: @background-prim;
+  border-radius: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-left: 1px;
 }
 
 menu {
-    background: @bg_color;
-    color: @fg_color;
+    background: @background-prim;
+    color: @foreground-inactive;
+		border-radius: 6px;
 }
+
 menuitem {
-    background: @bg_color;
-    color: @fg_color;
+    background: @background-prim;
+    color: @foreground-inactive;
     transition:
-        color 150ms,
-        font-weight 0.1s;
+        color .15s,
+				background .15s;
+		padding: 5px 0;
+		border-radius: 6px;
 }
 
 menuitem:hover {
-    color: @active_fg_color;
-    font-weight: bold;
+    color: @foreground;
+		background: @background-alt;
 }

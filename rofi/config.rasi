@@ -1,14 +1,24 @@
 /* ROFI SQUARED THEME USING THE MATERIAL DARKER PALETTE  */
 /* Author: Newman Sanchez (https://github.com/newmanls) */
 
+/*
+
+@define-color foreground #eff0f1;
+@define-color foreground-inactive #7f8c8d;
+@define-color background transparent;
+@define-color background-prim #232629;
+@define-color background-alt #31363b;
+
+*/
+
 * {
     font:   "FiraCode Nerd Font Medium 12";
 
-    bg0:     rgba(119, 16, 45, 1);
-    bg1:     #f70058;
-    fg0:     #fdf6e3;
+    bg0:     #232629;
+    bg1:     #31363b;
+    fg0:     #eff0f1;
 
-    accent-color:     #00cca0;
+    accent-color:     #eff0f1;
     urgent-color:     #ffcb6b;
 
     background-color:   transparent;
@@ -39,7 +49,7 @@ prompt, entry, element-icon, element-text {
 }
 
 prompt {
-    text-color: @bg1;
+    text-color: @fg0;
 }
 
 textbox {
