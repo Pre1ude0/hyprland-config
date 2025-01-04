@@ -24,7 +24,7 @@ git checkout <branch>
 ```bash
 cp -r <config>/* ~/.config/
 ```
-4. Reload your hyprland config
+4. Reload your hyprland config via exiting hyprland and then reentering from the tty
 ```bash
 hyprctl dispatch exit
 ```
