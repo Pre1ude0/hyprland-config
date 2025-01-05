@@ -41,8 +41,7 @@ echo -e "\nsource ~/.config/hyprland/<branch name>.conf" >> ~/.config/hypr/hyprl
 ```bash 
 nano ~/.config/hypr/hyprland.conf
 ```
-
-5. Reload your hyprland config and reenter through the tty
+5. Reload your hyprland config via exiting hyprland and then reentering from the tty
 ```bash
 hyprctl dispatch exit
 ```
