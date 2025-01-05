@@ -12,6 +12,7 @@ This is a collection of my hyprland configs/rices I have made. I'll be updating 
 ## Feature list
 - [x] Wallpaper using hyprpaper
 - [x] General hyprland config
+- [x] Kitty color scheme config
 - [x] Waybar config
 - [x] Rofi config
 - [x] Neofetch config
