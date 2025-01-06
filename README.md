@@ -36,9 +36,9 @@ cp -r * ~/.config/
 ```
 4. Add the visual config file (e.g. `pre1udes-config.conf`) to your hyprland config
 ```bash
-echo -e "\nsource= ~/.config/hypr/pre1udes-config.conf" >> ~/.config/hypr/hyprland.conf
+echo -e "\nsource = ~/.config/hypr/pre1udes-config.conf" >> ~/.config/hypr/hyprland.conf
 ```
-> or add `source= ~/.config/hypr/pre1udes-config.conf` manually with your text editor of choice
+> or add `source = ~/.config/hypr/pre1udes-config.conf` manually with your text editor of choice
 ```bash 
 nano ~/.config/hypr/hyprland.conf
 ```
