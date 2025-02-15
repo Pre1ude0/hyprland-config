@@ -1,7 +1,7 @@
 # Lauras Hyprland Configs
 This is a collection of my hyprland configs/rices I have made. I'll be updating this repo as I make more configs.
 
-## Configs
+## Config gallery
 #### [Cyberpunk quickhack](https://github.com/Pre1ude0/hyprland-config/tree/cyberpunk-quickhack)
 [![cyberpunk-quickhack](https://github.com/Pre1ude0/hyprland-config/blob/info/cyberpunk-quickhack.png?raw=true)](https://github.com/Pre1ude0/hyprland-config/tree/cyberpunk-quickhack)
 > Credits to [NoFood4u](https://wetdry.world/@NoFood4u) for the wallpaper
