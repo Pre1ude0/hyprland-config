@@ -1,0 +1,123 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+    "hard_tabs": false,
+    "tab_bar": {
+        "show": true
+    },
+    "notification_panel": {
+        "dock": "right"
+    },
+    "icon_theme": "Catppuccin Frappé",
+    "vim_mode": true,
+    "autosave": "on_focus_change",
+    "edit_predictions": {
+        "disabled_globs": ["**/**.md"],
+        "mode": "subtle",
+        "copilot": {
+            "proxy": null,
+            "proxy_no_verify": null
+        },
+        "enabled_in_text_threads": true,
+        "show_completions_on_input": true
+    },
+    "languages": {
+        "Python": {
+            "show_edit_predictions": true
+        }
+    },
+    "features": {
+        "copilot": true,
+        "edit_prediction_provider": "copilot"
+    },
+    "chat_panel": {
+        "dock": "left"
+    },
+    "agent": {
+        "inline_assistant_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4.1"
+        },
+        "default_model": {
+            "provider": "copilot_chat",
+            "model": "gpt-4.1"
+        }
+    },
+    "ui_font_size": 16,
+    "buffer_font_size": 16,
+    "tab_size": 4,
+    "theme": {
+        "mode": "system",
+        "light": "Github Dark",
+        "dark": "Catppuccin Espresso (Blur)"
+    },
+    "jupyter": {
+        "kernel_selections": {
+            "python": "python3"
+        }
+    },
+    "file_types": {
+        "HTML": ["ejs"],
+        "prettierc": ["json", "yaml", "yml"]
+    },
+    "lsp": {
+        "discord_presence": {
+            "initialization_options": {
+                // Application ID for the rich presence (don't touch it unless you know what you're doing)
+                "application_id": "1263505205522337886",
+                // Base URL for all language icons
+                "base_icons_url": "https://raw.githubusercontent.com/xhyrom/zed-discord-presence/main/assets/icons/",
+
+                "state": "Working on {filename}",
+                "details": "In {workspace}",
+                // URL for the large image
+                "large_image": "{base_icons_url}/{language:lo}.png", // :lo lowercase the language name
+                "large_text": "{language:u}", // :u capitalizes the first letter
+                // URL for the small image
+                "small_image": "{base_icons_url}/zed.png",
+                "small_text": "Zed",
+
+                // Idle settings - when you're inactive
+                "idle": {
+                    "timeout": 900, // Idle timeout in seconds (300 seconds = 5 minutes)
+
+                    // Action to take when idle
+                    // `change_activity` - changes the activity to idle with the following details
+                    // `clear_activity` - clears the activity (hides it)
+                    "action": "change_activity",
+
+                    "state": "Idling",
+                    "details": "In Zed",
+                    "large_image": "{base_icons_url}/zed.png",
+                    "large_text": "Zed",
+                    "small_image": "{base_icons_url}/idle.png",
+                    "small_text": "Idle"
+                },
+
+                "git_integration": true
+            }
+        },
+        "css-language-server": {
+            "settings": {
+                "css.lint.unknownAtRules": "ignore"
+            }
+        },
+        "tailwindcss-language-server": {
+            "settings": {
+                "classFunctions": ["cva", "cx"],
+                "experimental": {
+                    "classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"]
+                },
+                "includeLanguages": {
+                    "css": "css"
+                }
+            }
+        }
+    }
+}
