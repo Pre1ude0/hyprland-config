@@ -9,13 +9,17 @@ This is a collection of my hyprland configs/rices I have made. I'll be updating 
 #### [Moody rainforest](https://github.com/Pre1ude0/hyprland-config/tree/moody-rainforest)
 [![moody-rainforest](https://github.com/Pre1ude0/hyprland-config/blob/info/moody-rainforest.png?raw=true)](https://github.com/Pre1ude0/hyprland-config/tree/moody-rainforest)
 
+#### [Technological demise](https://github.com/Pre1ude0/hyprland-config/tree/technological-demise)
+[![technological-demise](https://github.com/Pre1ude0/hyprland-config/blob/info/technological-demise?raw=true)](https://github.com/Pre1ude0/hyprland-config/tree/technological-demise)
+
+
 ## Feature list
 - [x] Wallpaper using hyprpaper
 - [x] General hyprland config
 - [x] Kitty color scheme config
 - [x] Waybar config
 - [x] Rofi config
-- [x] Neofetch config
+- [x] Neofetch/Fastfetch config
 - [ ] Keybinding changes
 - [ ] Application installs
 
