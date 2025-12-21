@@ -10,7 +10,7 @@ This is a collection of my hyprland configs/rices I have made. I'll be updating 
 [![moody-rainforest](https://github.com/Pre1ude0/hyprland-config/blob/info/moody-rainforest.png?raw=true)](https://github.com/Pre1ude0/hyprland-config/tree/moody-rainforest)
 
 #### [Technological demise](https://github.com/Pre1ude0/hyprland-config/tree/technological-demise)
-[![technological-demise](https://github.com/Pre1ude0/hyprland-config/blob/info/technological-demise?raw=true)](https://github.com/Pre1ude0/hyprland-config/tree/technological-demise)
+[![technological-demise](https://github.com/Pre1ude0/hyprland-config/blob/info/technological-demise.png?raw=true)](https://github.com/Pre1ude0/hyprland-config/tree/technological-demise)
 
 
 ## Feature list
