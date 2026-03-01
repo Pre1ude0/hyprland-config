@@ -1,3 +1,5 @@
+## OUTDATED !!
+
 # Lauras Hyprland Configs
 This is a collection of my hyprland configs/rices I have made. I'll be updating this repo as I make more configs.
 
